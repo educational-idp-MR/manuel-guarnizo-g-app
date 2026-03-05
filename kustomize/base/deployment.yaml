@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: manuel-guarnizo-g-app-monitoring
-        image: hello-world:latest #Workflows will update this image
+        image: 116981771521.dkr.ecr.us-east-1.amazonaws.com/manuel-guarnizo-g-app:0.0.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
