@@ -7,11 +7,44 @@ Cuando acabes no olvides ayudarnos evaluando tu ⭐[experiencia](https://forms.o
 
 ## Tabla de Contenidos
 - [Etapa 1: Preparación del Ambiente](#etapa-1-preparación-del-ambiente)
-- [Etapa 2: Métricas Iniciales](#etapa-2-métricas-iniciales)
-- [Etapa 2.1: Dashboard Base en Grafana](#etapa-21-dashboard-base-en-grafana)
-- [Etapa 2.2: Propuesta de Métrica Personalizada](#etapa-22-propuesta-de-métrica-personalizada)
-- [Etapa 3: Experimentación y Análisis del Sistema](#etapa-3-experimentación-y-análisis-del-sistema)
+- DNS de la app
+  https://manuel-guarnizo-g-app.obs-stack.eci-idp.click/api/
 
+- APP funcionando
+  ![img.png](img.png)
+
+- Sigo con la etapa 2
+
+
+- [Etapa 2: Métricas Iniciales](#etapa-2-métricas-iniciales)}
+- La primera metrica que escoji fue:
+- Esta metrica por ejempplo puestra el exito de cuando se hizo el get de todas las 
+- urls que se habian creado con un 200 de codigo lo que indica que si las dio junto con
+- la duración y tamaños de respuesta
+- es de tipo summary, esta metrica puede ayudar cuando queremos 
+- ![img_1.png](img_1.png)
+
+
+- Estas son metricas gauge que se podrian relacionar con las summary +
+- las gauge muestran: indicador numérico que registra el valor actual instantáneo de una 
+- variable, permitiendo que suba o baje con el tiempo
+- ![img_2.png](img_2.png)
+
+
+
+- [Etapa 2.1: Dashboard Base en Grafana](#etapa-21-dashboard-base-en-grafana)
+- ![img_3.png](img_3.png)
+- [Etapa 2.2: Propuesta de Métrica Personalizada](#etapa-22-propuesta-de-métrica-personalizada)
+
+- ¿Qué tipo de panel usarías en Grafana?
+-  Gauge
+- ¿Qué consulta PromQL vas a utilizar? Experimenta con el constructor de consultas en grafana, y menciona cual es la consulta resultante para el comportamiento que quieres visualizar.
+-  Como estoy monitoreando manuel-guarnizo-g-app, necesito consultas específicas que filtren por el nombre de mi aplicación.
+- histogram_quantile(0.99, sum(rate(http_request_duration_seconds_bucket{app="manuel-guarnizo-g-app"}[5m])) by (le))
+- ¿Cuál es el propósito de la visualización? Provee una interpretación en palabras con el propósito de la visualización
+- El propósito es darme visibilidad inmediata sobre la experiencia real de los usuarios que están usando manuel-guarnizo-g-app.
+
+- [Etapa 3: Experimentación y Análisis del Sistema](#etapa-3-experimentación-y-análisis-del-sistema)
 ---
 
 ## Etapa 1: Preparación del Ambiente
