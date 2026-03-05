@@ -2,7 +2,7 @@
 
 **Nombre del estudiante:** _____________________________  
 ---
-Cuando acabes no olvides ayudarnos evaluando tu ⭐[experiencia](https://forms.office.com/r/JCyhCpujrt)⭐
+Cuando acabes no olvides ayudarnos evaluando tu ⭐experiencia⭐
 ---
 
 ## Tabla de Contenidos
